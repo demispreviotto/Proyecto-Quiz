@@ -11,43 +11,71 @@
 
 <body>
     <nav class="nav" id="nav">
-        <span class="link" id="homeLink">Home</span>
-        <span class="link" id="questionsLink">Questions</span>
-        <span class="link" id="resultsLink">Results</span>
+        <span class="link" id="homeNav">Home</span>
+        <span class="link" id="scoresNav">Scores</span>
     </nav>
-    <section class="section show" name="homeLink">
-        <div class="container" id="home">
+    <section class="section show" name="home" id="homeSection">
+        <div class="container">
             <h1>Home</h1>
-            <!-- <h2>A place where someone still thinks about you is a place you can call home</h2> -->
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore incidunt
-                quos
-                eligendi sit, optio in veniam neque. Quis provident voluptates architecto nisi sequi dolorem vitae.</p>
-            <div class="btn-container">
-                <!-- <button class="btn btn-secondary">Prev</button> -->
-                <button class="btn btn-primary">Play</button>
+            <div class="text-container">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore
+                    incidunt
+                    quos
+                    eligendi sit, optio in veniam neque. Quis provident voluptates architecto nisi sequi dolorem vitae.
+                </p>
+            </div>
+            <div class="drive-container">
+                <button class="btn btn-drive show" id="startBtn">Start</button>
             </div>
         </div>
     </section>
-    <section class="section" name="questionsLink">
-        <div class="container" id="questions">
-            <h1>Questions</h1>
-            <!-- <h2>A place where someone still thinks about you is a place you can call home</h2> -->
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore incidunt
-                quos
-                eligendi sit, optio in veniam neque. Quis provident voluptates architecto nisi sequi dolorem vitae.</p>
-            <button class="btn btn-secondary">Prev</button>
-            <button class="btn btn-primary">Next</button>
+    <section class="section" name="game" id="gameSection">
+        <div class="container" id="gameContainer">
+            <div class="text-container">
+                <p id="questionElement"></p>
+            </div>
+            <div class="btn-container" id="btnContainer">
+            </div>
+            <div class="drive-container">
+                <button class="btn btn-drive" id="resultBtn">Results</button>
+                <button class="btn btn-drive" id="nextBtn">Next</button>
+            </div>
         </div>
     </section>
-    <section class="section" name="resultsLink">
-        <div class="container" id="results">
+    <section class="section show" name="result" id="resultSection">
+        <div class="container">
             <h1>Results</h1>
-            <!-- <h2>A place where someone still thinks about you is a place you can call home</h2> -->
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore incidunt
-                quos
-                eligendi sit, optio in veniam neque. Quis provident voluptates architecto nisi sequi dolorem vitae.</p>
-            <button class="btn btn-secondary">Prev</button>
-            <button class="btn btn-primary">Next</button>
+            <div class="text-container">
+                <form>
+                    <input type="text" maxlength="3" id="resultUserInput">
+                    <!-- <input type="text" maxlength="1">
+                    <input type="text" maxlength="1"> -->
+                </form>
+                <h1 id="resultScoreH1"></h1>
+                <button class="btn btn-drive show" id="resultSaveBtn">Save Score</button>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore
+                    incidunt quos.
+                </p>
+            </div>
+            <div class="drive-container">
+                <button class="btn btn-drive show" id="resultHomeBtn">Home</button>
+                <button class="btn btn-drive show" id="resultRestartBtn">Restart</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" name="scores" id="scoresSection">
+        <div class="container">
+            <h1>Scores</h1>
+            <ul id="scoresUl"></ul>
+            <div class="text-container">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore
+                    incidunt quos.
+                </p>
+            </div>
+            <!-- <div class="drive-container">
+                <button class="btn btn-drive show" id="resultBtn1">BTN1</button>
+                <button class="btn btn-drive show" id="resultBtn2">BTN2</button>
+            </div> -->
         </div>
     </section>
 
