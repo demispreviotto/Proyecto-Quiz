@@ -73,12 +73,13 @@ const startGame = () => {
 
 const showQuestion = (question) => {
     questionElement.innerHTML = question.question;
-
-    question.answers.forEach((answer) => {
+    const shuffledAnswers = shuffleArray([...question.answers]);//
+    shuffledAnswers.forEach((answer) => {
+        // question.answers.forEach((answer) => {
         const button = document.createElement("button");
         button.innerHTML = answer;
         button.classList.add('btn', 'btn-primary')
-        if (answer == question.correctAnswer) {
+        if (answer === question.correctAnswer) {
             button.dataset.correct = true;
         }
         button.addEventListener("click", (e) => {
@@ -88,6 +89,14 @@ const showQuestion = (question) => {
         );
         btnContainer.appendChild(button);
     });
+}
+
+const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 const setNextQuestion = () => {
@@ -132,9 +141,8 @@ scoresNav.addEventListener('click', () => {
     console.log(scoresDB, scoresUl)
     let loadedScoresDB = JSON.parse(localStorage.getItem('scoreDB'))
     console.log(loadedScoresDB)
-    loadedScoresDB.sort((a, b) => b.score - a.score);//order scoresDB
+    loadedScoresDB.sort((a, b) => b.score - a.score);
     for (let i = 0; i < 10; i++) {
-        // console.log(e)
         scoresUl.innerHTML += `<li>${loadedScoresDB[i].user} ------------------ ${loadedScoresDB[i].score}</li>`
     }
 })
@@ -150,6 +158,7 @@ nextBtn.addEventListener("click", () => {
 });
 resultBtn.addEventListener('click', () => {
     showPage('result')
+    resultSaveBtn.classList.contains('show') ? "" : resultSaveBtn.classList.add('show');
     resultScoreH1.innerText = score
 })
 
@@ -160,4 +169,5 @@ resultSaveBtn.addEventListener('click', () => {
     console.log(resultUserInput.value, score)
     console.log(scoresDB)
     localStorage.setItem('scoreDB', JSON.stringify(scoresDB))
+    resultSaveBtn.classList.remove('show')
 })
