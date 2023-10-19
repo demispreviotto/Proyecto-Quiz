@@ -39,3 +39,7 @@ Clean code, good practices
 - Readme with explanation of the project
 - Extras: Use of Local Storage and graphics
 
+![home](./assets/Recurso%1-100.jpg "home page")
+![scores](./assets/Recurso%3-100.jpg "scores page")
+![game](./assets/Recurso%4-100.jpg "game page")
+![result](./assets/Recurso%7-100.jpg "result page")
