@@ -9,7 +9,6 @@
 
 body {
     background-color: #221e22;
-    /* padding: 2em; */
 }
 
 h1,
@@ -32,23 +31,33 @@ h2 {
 p {
     font-size: 1.2em;
     font-weight: 400;
+    text-align: center;
 }
 
 input {
     color: white;
     font-weight: 600;
-    height: 35px;
-    width: 105px;
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
     text-transform: uppercase;
     text-align: center;
     font-size: x-large;
     background: black;
 }
 
-li {
+input::selection {
+    background: black;
+}
+
+th,
+td {
+    border-bottom: 1px solid lightgray;
+    text-align: center;
     list-style-type: none;
     color: lightgray;
     text-transform: uppercase;
+    width: 100px;
 }
 
 .nav {
@@ -72,7 +81,6 @@ li {
     padding: 1em;
     justify-content: center;
     height: 85vh;
-    /* min-width: 80%; */
     max-width: 750px;
 }
 
@@ -84,10 +92,8 @@ li {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    /* min-width: 90%; */
+    justify-content: space-evenly;
     padding: 2em;
-    align-items: center;
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
@@ -115,7 +121,6 @@ li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* max-width: 700px; */
 }
 
 .btn {
@@ -136,12 +141,6 @@ li {
     max-width: 700px;
 }
 
-.btn-drive {
-    visibility: hidden;
-    width: 50%;
-    max-width: 200px;
-}
-
 .correct {
     color: lightgray;
 }
@@ -150,11 +149,16 @@ li {
     color: rgb(95, 95, 95);
 }
 
+.btn-drive {
+    visibility: hidden;
+    width: 50%;
+    max-width: 200px;
+}
+
 .drive-container {
     display: flex;
-    /* visibility: hidden; */
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: flex-end;
     width: 100%;
     max-width: 700px;

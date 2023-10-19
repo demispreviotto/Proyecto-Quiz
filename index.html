@@ -14,14 +14,13 @@
         <span class="link" id="homeNav">Home</span>
         <span class="link" id="scoresNav">Scores</span>
     </nav>
-    <section class="section show" name="home" id="homeSection">
+    <section class="section show" data-name="home" id="homeSection">
         <div class="container">
             <h1>Home</h1>
             <div class="text-container">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore
-                    incidunt
-                    quos
-                    eligendi sit, optio in veniam neque. Quis provident voluptates architecto nisi sequi dolorem vitae.
+                <p>A simple quiz or trivia game web application that allows users to test their knowledge by answering
+                    questions. This
+                    project is built using HTML, CSS, and JavaScript.
                 </p>
             </div>
             <div class="drive-container">
@@ -29,7 +28,7 @@
             </div>
         </div>
     </section>
-    <section class="section" name="game" id="gameSection">
+    <section class="section" data-name="game" id="gameSection">
         <div class="container" id="gameContainer">
             <div class="text-container">
                 <p id="questionElement"></p>
@@ -40,35 +39,37 @@
                 <button class="btn btn-drive" id="resultBtn">Results</button>
                 <button class="btn btn-drive" id="nextBtn">Next</button>
             </div>
+            <p id="pageIndex"></p>
         </div>
     </section>
-    <section class="section" name="result" id="resultSection">
+    <section class="section" data-name="result" id="resultSection">
         <div class="container">
             <h1>Results</h1>
+            <p>Enter a three letter user to save your results, maybe you can be between the best seven players.
+            </p>
             <div class="text-container">
                 <form>
-                    <input type="text" maxlength="3" id="resultUserInput">
+                    <input type="text" maxlength="3" id="resultUserInput" autofocus>
                 </form>
                 <h1 id="resultScoreH1"></h1>
+            </div>
+            <div class="drive-container">
                 <button class="btn btn-drive show" id="resultSaveBtn">Save Score</button>
+            </div>
+        </div>
+    </section>
+    <section class="section" data-name="scores" id="scoresSection">
+        <div class="container">
+            <h1>Scores</h1>
+            <table id="scoresUl"></table>
+            <div class="text-container">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore
                     incidunt quos.
                 </p>
             </div>
             <div class="drive-container">
-                <button class="btn btn-drive show" id="resultHomeBtn">Home</button>
-                <button class="btn btn-drive show" id="resultRestartBtn">Restart</button>
-            </div>
-        </div>
-    </section>
-    <section class="section" name="scores" id="scoresSection">
-        <div class="container">
-            <h1>Scores</h1>
-            <ul id="scoresUl"></ul>
-            <div class="text-container">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi quidem vero porro inventore
-                    incidunt quos.
-                </p>
+                <button class="btn btn-drive show" id="scoresHomeBtn">Home</button>
+                <button class="btn btn-drive show" id="scoresRestartBtn">Play</button>
             </div>
         </div>
     </section>
