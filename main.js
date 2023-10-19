@@ -19,7 +19,6 @@ const scoresUl = document.getElementById('scoresUl');
 const sections = document.querySelectorAll('.section')
 const links = document.querySelectorAll('.link')
 
-const questions = [];
 let score = 0;
 const scoresDB = JSON.parse(localStorage.getItem('scoreDB')) || [
     { user: 'dem', score: 9 },
