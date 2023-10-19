@@ -39,7 +39,7 @@ Clean code, good practices
 - Readme with explanation of the project
 - Extras: Use of Local Storage and graphics
 
-![home](./assets/Recurso%1-100.jpg "home page")
-![scores](./assets/Recurso%3-100.jpg "scores page")
-![game](./assets/Recurso%4-100.jpg "game page")
-![result](./assets/Recurso%7-100.jpg "result page")
+![Recurso 1](https://github.com/demispreviotto/Proyecto-Quiz/assets/99538600/85d763fd-b673-486b-b28a-ee4b0b1e7bee)
+![Recurso 5](https://github.com/demispreviotto/Proyecto-Quiz/assets/99538600/833c4b95-82f5-4246-83f4-c69cf932451c)
+![Recurso 6](https://github.com/demispreviotto/Proyecto-Quiz/assets/99538600/596abf67-e369-4afe-813d-6d35b3061776)
+![Recurso 3](https://github.com/demispreviotto/Proyecto-Quiz/assets/99538600/89c6ea5b-8be6-4a13-aafa-f693fd187634)
